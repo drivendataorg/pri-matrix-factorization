@@ -1,0 +1,30 @@
+Procedure for extending the training dataset with clips not used for training or testing
+both as pseudo labels and hand labelled ones
+
+
+First I predicted results for unused from multiple models,
+I planned to use other folds and inception_v2_resnet model but could not finish it before the competition deadline.
+If this method used, I'd recommend running on other folds and inception_v2_resnet as well.
+
+python3.6 single_frame_cnn.py generate_prediction_unused --model resnet50_avg --fold 2 --weights ../output/checkpoints/resnet50_avg_fold_2/checkpoint-011*
+python3.6 single_frame_cnn.py generate_prediction_unused --model xception_avg --fold 1 --weights ../output/checkpoints/xception_avg_fold_1/checkpoint-011*
+python3.6 single_frame_cnn.py generate_prediction_unused --model inception_v3 --fold 1 --weights ../output/checkpoints/inception_v3_fold_1/checkpoint-011*
+python3.6 single_frame_cnn.py generate_prediction_unused --model xception_avg --fold 2 --weights ../output/checkpoints/xception_avg_fold_2/checkpoint-011*
+python3.6 single_frame_cnn.py generate_prediction_unused --model inception_v3 --fold 2 --weights ../output/checkpoints/inception_v3_fold_2/checkpoint-011*
+python3.6 second_stage_nn.py predict_unused
+
+finding both clips models agree on and clips predictions are very different
+complex cases clips are copied to ../output/to_label/ with subdirectories sorted by importance and suggested labels added to file name
+
+python3.6 select_unused_clips.py find_clips
+
+now it's necessary to hand label suggested clips in the ../output/to_label/ directory
+by watching and moving clips to ../input/extra_data/<class>, so it looks like:
+
+extra_data/human/406 human 0.50_hippopotamus 0.24_blank 0.17_Gr86s4TAV4.mp4
+extra_data/human/440 human 0.48_blank 0.44_other primate 0.11_3pQLzqDWqZ.mp4
+extra_data/elephant
+extra_data/elephant/380 elephant 0.59_blank 0.45_ifQsIxjWpB.mp4
+extra_data/elephant/170 blank 0.62_elephant 0.39_uatgzWRtbC.mp4
+
+python3.6 select_unused_clips.py generate_labeled_csv

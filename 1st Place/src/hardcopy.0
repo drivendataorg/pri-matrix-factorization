@@ -1,0 +1,55 @@
+
+
+
+ubuntu@ip-172-31-22-94:~/chimps-validation/1st/pri-matrix-submission-train-Dmytro/src$ source activate first
+(first) ubuntu@ip-172-31-22-94:~/chimps-validation/1st/pri-matrix-submission-train-Dmytro/src$ bash train01.sh
+/home/ubuntu/anaconda3/envs/first/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fa
+st_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/ubuntu/anaconda3/envs/first/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float`
+ to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+2018-02-02 18:04:31.868635: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled t
+o use: SSE4.1 SSE4.2 AVX
+2018-02-02 18:04:31.942910: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but ther
+e must be at least one NUMA node, so returning NUMA node zero
+2018-02-02 18:04:31.943327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties:
+name: GRID K520 major: 3 minor: 0 memoryClockRate(GHz): 0.797
+pciBusID: 0000:00:04.0
+totalMemory: 3.94GiB freeMemory: 3.90GiB
+2018-02-02 18:04:31.943371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GRID K520
+, pci bus id: 0000:00:04.0, compute capability: 3.0)
+resnet50_avg  0
+train clips: 153097
+test clips: 51032
+bird 2386
+blank 122270
+cattle 372
+chimpanzee 5045
+elephant 1085
+forest buffalo 9
+gorilla 174
+hippopotamus 175
+human 20034
+hyena 10
+large ungulate 224
+leopard 209
+lion 2
+other (non-primate) 1883
+other (primate) 20453
+pangolin 63
+porcupine 569
+reptile 8
+rodent 2911
+small antelope 273
+small cat 79
+wild dog 21
+duiker 21601
+hog 4650
+Epoch 1/1
+2314/9568 [======>.......................] - ETA: 5308s - loss: 0.1216 - acc: 0.9607
+
+
+
+
