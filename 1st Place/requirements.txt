@@ -30,5 +30,5 @@ slicerator==0.9.8
 tensorflow-gpu==1.4.1
 tensorflow-tensorboard==0.4.0rc3
 tqdm==4.19.5
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 xgboost==0.6a2
