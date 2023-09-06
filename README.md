@@ -10,7 +10,7 @@
 
 ## What's in this Repository
 
-This repository contains code volunteered from leading competitors in the [Pri-matrix Factorization](https://www.drivendata.org/competitions/49/deep-learning-camera-trap-animals/) DrivenData challenge.
+This repository contains code volunteered from leading competitors in the [Pri-matrix Factorization](https://www.drivendata.org/competitions/49/deep-learning-camera-trap-animals/) DrivenData challenge. Code for all winning solutions are open source under the MIT License.
 
 **Winning code for other DrivenData competitions is available in the [competition-winners repository](https://github.com/drivendataorg/competition-winners).**
 
