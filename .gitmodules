@@ -1,0 +1,3 @@
+[submodule "1st Place/src/cnn_finetune"]
+	path = 1st Place/src/cnn_finetune
+	url = https://github.com/flyyufelix/cnn_finetune.git
